@@ -1,6 +1,5 @@
 import { LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { TrendingUp, AlertCircle, Calendar, MapPin, Zap } from 'lucide-react';
-
 const demandForecastData = [
   { month: 'Sep', actual: 93000, predicted: null, confidence: null },
   { month: 'Oct', actual: 112000, predicted: null, confidence: null },
@@ -13,7 +12,6 @@ const demandForecastData = [
   { month: 'May', actual: null, predicted: 128000, confidence: 87 },
   { month: 'Jun', actual: null, predicted: 96000, confidence: 90 },
 ];
-
 const anomalyDetectionData = [
   { center: 'Mumbai Central', normalRange: '8000-9000', current: 8900, anomalyScore: 0, status: 'normal' },
   { center: 'Delhi Hub', normalRange: '7500-8500', current: 7800, anomalyScore: 0, status: 'normal' },
