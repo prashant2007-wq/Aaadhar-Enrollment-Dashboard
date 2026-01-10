@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Database, Download, Upload, Trash2, Plus, Edit, Search, Filter } from 'lucide-react';
 import { database, EnrolmentRecord } from '../lib/database';
-
 export function DatabaseManagement() {
   const [records, setRecords] = useState<EnrolmentRecord[]>(database.getAllEnrolmentRecords());
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,14 +15,12 @@ export function DatabaseManagement() {
     const matchesFilter = filterStatus === 'all' || record.status === filterStatus;
     return matchesSearch && matchesFilter;
   });
-
   const handleDelete = (id: string) => {
     if (window.confirm('Are you sure you want to delete this record?')) {
       database.deleteEnrolmentRecord(id);
       setRecords(database.getAllEnrolmentRecords());
     }
   };
-
   const handleExport = () => {
     const dataStr = JSON.stringify(records, null, 2);
     const dataBlob = new Blob([dataStr], { type: 'application/json' });
