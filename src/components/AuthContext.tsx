@@ -1,5 +1,4 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
 interface User {
   id: string;
   email: string;
@@ -7,7 +6,6 @@ interface User {
   role: 'admin' | 'operator' | 'analyst';
   createdAt: string;
 }
-
 interface AuthContextType {
   user: User | null;
   login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
@@ -15,13 +13,10 @@ interface AuthContextType {
   logout: () => void;
   isLoading: boolean;
 }
-
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
-
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     // Check for existing session
     const savedUser = localStorage.getItem('aadhaar_user');
@@ -30,18 +25,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     setIsLoading(false);
   }, []);
-
   const login = async (email: string, password: string): Promise<{ success: boolean; error?: string }> => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 800));
-
     // Demo credentials
     const demoUsers = [
       { email: 'admin@aadhaar.gov.in', password: 'admin123', name: 'Admin User', role: 'admin' as const },
       { email: 'operator@aadhaar.gov.in', password: 'operator123', name: 'Center Operator', role: 'operator' as const },
       { email: 'analyst@aadhaar.gov.in', password: 'analyst123', name: 'Data Analyst', role: 'analyst' as const },
     ];
-
     // Check stored users
     const storedUsers = JSON.parse(localStorage.getItem('aadhaar_users') || '[]');
     const allUsers = [...demoUsers, ...storedUsers];
