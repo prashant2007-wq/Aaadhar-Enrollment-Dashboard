@@ -142,7 +142,7 @@ interface EnrolmentCenter {
   name: string;
   district: string;
   state: string;
-  type: 'Urban' | 'Semi-Urban' | 'Rural';
+  type: 'Urban' | 'Semi-Urban' | 'Rural';   
   capacity: number;
   staffCount: number;
   equipmentCount: number;
