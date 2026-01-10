@@ -9,13 +9,10 @@ import { OperationalMetrics } from './components/OperationalMetrics';
 import { PredictiveAnalytics } from './components/PredictiveAnalytics';
 import { InterventionSystem } from './components/InterventionSystem';
 import { DatabaseManagement } from './components/DatabaseManagement';
-
 type Tab = 'geographic' | 'demographic' | 'operational' | 'predictive' | 'intervention' | 'database';
-
 function Dashboard() {
   const { user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<Tab>('geographic');
-
   const tabs = [
     { id: 'geographic' as Tab, label: 'Geographic Patterns', icon: MapPin },
     { id: 'demographic' as Tab, label: 'Demographics', icon: Users },
@@ -24,7 +21,6 @@ function Dashboard() {
     { id: 'intervention' as Tab, label: 'Smart Interventions', icon: Target },
     { id: 'database' as Tab, label: 'Database Management', icon: Database },
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
@@ -66,7 +62,6 @@ function Dashboard() {
           </div>
         </div>
       </header>
-
       {/* Navigation Tabs */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +86,6 @@ function Dashboard() {
           </nav>
         </div>
       </div>
-
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {activeTab === 'geographic' && <GeographicAnalysis />}
@@ -101,7 +95,6 @@ function Dashboard() {
         {activeTab === 'intervention' && <InterventionSystem />}
         {activeTab === 'database' && <DatabaseManagement />}
       </main>
-
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -117,11 +110,9 @@ function Dashboard() {
     </div>
   );
 }
-
 function AuthWrapper() {
   const { user, isLoading } = useAuth();
   const [showSignup, setShowSignup] = useState(false);
-
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 flex items-center justify-center">
@@ -132,17 +123,14 @@ function AuthWrapper() {
       </div>
     );
   }
-
   if (!user) {
     if (showSignup) {
       return <SignupPage onSwitchToLogin={() => setShowSignup(false)} />;
     }
     return <LoginPage onSwitchToSignup={() => setShowSignup(true)} />;
   }
-
   return <Dashboard />;
 }
-
 export default function App() {
   return (
     <AuthProvider>
