@@ -1,7 +1,7 @@
   {
       "name": "Aadhaar Enrolment Analysis Dashboard",
       "version": "0.1.0",
-      "private": true,
+      "private": true, 
       "dependencies": {
           "@radix-ui/react-accordion": "^1.2.3",
           "@radix-ui/react-alert-dialog": "^1.1.6",
