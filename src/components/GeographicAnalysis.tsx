@@ -10,7 +10,6 @@ const districtData = [
   { district: 'Rural Bihar', enrolments: 67000, population: 340000, coverage: 19.7, trend: 'down' },
   { district: 'Hyderabad', enrolments: 134000, population: 190000, coverage: 70.5, trend: 'stable' },
 ];
-
 const urbanRuralData = [
   { category: 'Urban', enrolments: 1200000, target: 1400000 },
   { category: 'Semi-Urban', enrolments: 780000, target: 950000 },
