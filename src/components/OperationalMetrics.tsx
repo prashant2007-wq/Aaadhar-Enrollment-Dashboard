@@ -24,7 +24,6 @@ const errorCategories = [
   { category: 'Incomplete Data', count: 2900, color: '#EC4899' },
   { category: 'Network Issues', count: 1800, color: '#6366F1' },
 ];
-
 const processingTimelineData = [
   { month: 'Jan', avgTime: 14.5 },
   { month: 'Feb', avgTime: 14.2 },
