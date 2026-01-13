@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import { LogIn, Mail, Lock, AlertCircle, Eye, EyeOff, Shield } from 'lucide-react';
 import { useAuth } from './AuthContext';
-
 interface LoginPageProps {
   onSwitchToSignup: () => void;
 }
-
 export function LoginPage({ onSwitchToSignup }: LoginPageProps) {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
