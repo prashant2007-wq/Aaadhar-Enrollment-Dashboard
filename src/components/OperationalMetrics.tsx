@@ -11,7 +11,6 @@ const centerEfficiency = [
   { center: 'Rural Unit A', processed: 3400, capacity: 8000, efficiency: 42.5, avgTime: 25, errors: 8.9 },
   { center: 'Rural Unit B', processed: 2900, capacity: 8000, efficiency: 36.2, avgTime: 28, errors: 12.4 },
 ];
-
 const updateTypeData = [
   { type: 'Biometric', count: 145000, avgTime: 8, successRate: 94.5 },
   { type: 'Address', count: 132000, avgTime: 6, successRate: 97.2 },
