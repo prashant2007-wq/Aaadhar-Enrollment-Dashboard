@@ -1,7 +1,3 @@
-// Database Schema and Mock Data
-// This file contains the database structure and mock data
-// Can be easily migrated to a real database (Supabase, PostgreSQL, etc.)
-
 export interface EnrolmentRecord {
   id: string;
   aadhaarNumber: string; // Masked for privacy
