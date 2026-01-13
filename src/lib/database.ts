@@ -1,3 +1,4 @@
+
 export interface EnrolmentRecord {
   id: string;
   aadhaarNumber: string; // Masked for privacy
