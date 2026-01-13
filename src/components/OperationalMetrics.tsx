@@ -1,6 +1,5 @@
 import { BarChart, Bar, LineChart, Line, ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import { Activity, Clock, AlertTriangle, CheckCircle, XCircle, TrendingUp } from 'lucide-react';
-
 const centerEfficiency = [
   { center: 'Mumbai Central', processed: 8900, capacity: 10000, efficiency: 89, avgTime: 12, errors: 2.3 },
   { center: 'Delhi Hub', processed: 7800, capacity: 9000, efficiency: 86.7, avgTime: 14, errors: 3.1 },
@@ -18,7 +17,6 @@ const updateTypeData = [
   { type: 'Demographic', count: 87000, avgTime: 7, successRate: 96.3 },
   { type: 'Photo', count: 76000, avgTime: 9, successRate: 91.8 },
 ];
-
 const errorCategories = [
   { category: 'Biometric Mismatch', count: 4200, color: '#EF4444' },
   { category: 'Document Issues', count: 3800, color: '#F59E0B' },
