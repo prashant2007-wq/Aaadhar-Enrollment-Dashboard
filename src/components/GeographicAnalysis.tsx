@@ -1,6 +1,5 @@
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { MapPin, TrendingDown, TrendingUp, Users } from 'lucide-react';
-
 const districtData = [
   { district: 'Mumbai', enrolments: 245000, population: 320000, coverage: 76.5, trend: 'up' },
   { district: 'Delhi NCR', enrolments: 198000, population: 280000, coverage: 70.7, trend: 'up' },
