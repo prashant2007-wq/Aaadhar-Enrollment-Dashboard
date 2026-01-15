@@ -15,7 +15,7 @@ Identify meaningful patterns, trends, anomalies, and predictive indicators in Aa
 ---
 
 ## 💡 Solution Overview
-
+  
 This project presents a **comprehensive Aadhaar Enrolment Analytics Dashboard** designed to:
 
 - Identify **geographic and demographic enrolment gaps**
