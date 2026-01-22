@@ -9,7 +9,7 @@
 ## 📖 Problem Statement (WEF / Hackathon)
 
 **Unlocking Societal Trends in Aadhaar Enrolment and Updates**
-
+ 
 Identify meaningful patterns, trends, anomalies, and predictive indicators in Aadhaar enrolment and update data. Translate these insights into actionable solution frameworks that can support **informed decision-making, operational efficiency, and system-level improvements** in Aadhaar enrolment infrastructure.
 
 ---
